@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Enneagram Map</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- LANDING -->
+    <section id="landing" class="screen active">
+      <div class="landing-bg"></div>
+      <div class="landing-content">
+        <div class="enneagram-symbol">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer circle -->
+            <circle cx="150" cy="150" r="130" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+            <!-- Inner triangle (3-6-9) -->
+            <polygon points="150,20 17,247 283,247" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.4"/>
+            <!-- Hexad (1-4-2-8-5-7) -->
+            <polyline points="233,68 70,228 267,228 109,42 280,197 33,68 233,68" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.4"/>
+            <!-- Points -->
+            <g class="enneagram-points">
+              <circle cx="150" cy="20" r="5" fill="#c9a84c" opacity="0.8"/>  <!-- 9 top -->
+              <circle cx="233" cy="68" r="5" fill="#c9a84c" opacity="0.8"/>  <!-- 1 -->
+              <circle cx="280" cy="150" r="5" fill="#c9a84c" opacity="0.8"/> <!-- 2 -->
+              <circle cx="267" cy="228" r="5" fill="#c9a84c" opacity="0.8"/> <!-- 3 -->
+              <circle cx="210" cy="275" r="5" fill="#c9a84c" opacity="0.8"/> <!-- 4 -->
+              <circle cx="90" cy="275" r="5" fill="#c9a84c" opacity="0.8"/>  <!-- 5 -->
+              <circle cx="33" cy="228" r="5" fill="#c9a84c" opacity="0.8"/> <!-- 6 -->
+              <circle cx="20" cy="150" r="5" fill="#c9a84c" opacity="0.8"/> <!-- 7 -->
+              <circle cx="70" cy="68" r="5" fill="#c9a84c" opacity="0.8"/>  <!-- 8 -->
+            </g>
+            <defs>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#c9a84c;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#f0d68a;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h1 class="landing-title">The Enneagram Map</h1>
+        <p class="landing-subtitle">Discover your type. Uncover your core wound.<br>Begin the path toward integration.</p>
+        <button id="start-btn" class="btn btn-primary">Begin Your Journey</button>
+        <p class="landing-note">18 questions &middot; About 5 minutes &middot; No account needed</p>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="screen">
+      <div class="quiz-header">
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <span class="progress-text" id="progress-text">1 / 18</span>
+      </div>
+      <div class="quiz-body">
+        <div class="question-container" id="question-container">
+          <p class="question-prompt" id="question-prompt"></p>
+          <h2 class="question-text" id="question-text"></h2>
+          <div class="options" id="options"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results" class="screen">
+      <div class="results-content">
+        <div class="results-header">
+          <p class="results-label">Your Enneagram Type</p>
+          <div class="type-badge" id="type-badge">
+            <span class="type-number" id="type-number"></span>
+          </div>
+          <h2 class="type-name" id="type-name"></h2>
+          <p class="type-tagline" id="type-tagline"></p>
+        </div>
+
+        <!-- Enneagram wheel with highlighted type -->
+        <div class="results-wheel">
+          <svg id="results-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="150" cy="150" r="130" fill="none" stroke="#c9a84c33" stroke-width="1"/>
+            <polygon points="150,20 17,247 283,247" fill="none" stroke="#c9a84c22" stroke-width="1"/>
+            <polyline points="233,68 70,228 267,228 109,42 280,197 33,68 233,68" fill="none" stroke="#c9a84c22" stroke-width="1"/>
+          </svg>
+        </div>
+
+        <div class="type-description" id="type-description"></div>
+
+        <!-- Score breakdown -->
+        <div class="scores-section">
+          <h3>Your Type Scores</h3>
+          <div class="scores-chart" id="scores-chart"></div>
+        </div>
+
+        <!-- Triad info -->
+        <div class="triad-info" id="triad-info"></div>
+
+        <button id="explore-wound-btn" class="btn btn-primary btn-large">Explore Your Core Wound</button>
+      </div>
+    </section>
+
+    <!-- CORE WOUND PATHWAY -->
+    <section id="pathway" class="screen">
+      <div class="pathway-content">
+        <div class="pathway-header">
+          <button id="back-to-results" class="btn-back">&larr; Back to Results</button>
+          <h2 class="pathway-title" id="pathway-title"></h2>
+          <p class="pathway-subtitle" id="pathway-subtitle"></p>
+        </div>
+
+        <div class="pathway-nav" id="pathway-nav"></div>
+
+        <div class="pathway-stages" id="pathway-stages"></div>
+
+        <div class="pathway-footer">
+          <button id="prev-stage" class="btn btn-secondary">&larr; Previous</button>
+          <button id="next-stage" class="btn btn-primary">Next &rarr;</button>
+        </div>
+
+        <div class="pathway-complete" id="pathway-complete" style="display:none">
+          <div class="complete-icon">&#10047;</div>
+          <h3>Your Map Is Drawn</h3>
+          <p>This pathway is yours to revisit whenever you need grounding. The wound doesn't disappear — but your relationship to it transforms.</p>
+          <button id="retake-btn" class="btn btn-secondary">Retake the Quiz</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
