@@ -11,6 +11,7 @@ const TYPES = {
     triad: "Competency",
     coreDesire: "To be good, to have integrity",
     coreFear: "Being corrupt, evil, or defective",
+    gifts: ["Integrity and a strong moral compass", "Meticulous attention to detail and quality", "Reliability and a deep sense of responsibility", "The courage to speak up for what's right", "A drive to improve themselves and the world"],
     coreWound: "It's not okay to make mistakes",
     woundOrigin: "As a child, you felt that love was conditional on being good. You learned to suppress your natural impulses — anger, desire, playfulness — in order to earn approval. The inner critic formed early: a relentless voice that measures every action against an impossible standard.",
     description: [
@@ -101,6 +102,7 @@ const TYPES = {
     triad: "Rejection",
     coreDesire: "To be loved and wanted",
     coreFear: "Being unwanted, unloved, or dispensable",
+    gifts: ["Deep empathy and attunement to others", "Warmth, generosity, and genuine care", "The ability to make people feel seen and valued", "Natural talent for building meaningful connection", "Selfless devotion to those they love"],
     coreWound: "It's not okay to have your own needs",
     woundOrigin: "As a child, you learned that love flowed when you were giving, helpful, attuned to others. Your own needs felt dangerous — too much, too selfish. So you learned to meet everyone else's needs and wait for love to come back to you.",
     description: [
@@ -190,6 +192,7 @@ const TYPES = {
     triad: "Competency",
     coreDesire: "To be valuable and worthwhile",
     coreFear: "Being worthless or a failure",
+    gifts: ["Drive, ambition, and remarkable efficiency", "Adaptability and sharp social intelligence", "The ability to inspire others through example", "Confidence, charisma, and focused execution", "A talent for turning vision into tangible results"],
     coreWound: "It's not okay to have your own feelings and identity",
     woundOrigin: "As a child, you learned that love came through achievement. Not for who you were, but for what you accomplished. You became a shapeshifter — reading the room, becoming whatever was valued, performing your way to love.",
     description: [
@@ -279,6 +282,7 @@ const TYPES = {
     triad: "Reactive",
     coreDesire: "To be themselves, to find their significance",
     coreFear: "Having no identity or personal significance",
+    gifts: ["Deep emotional intelligence and self-awareness", "Creative originality and authentic expression", "The ability to find beauty and meaning in suffering", "Profound empathy for others in pain", "An unwavering commitment to living authentically"],
     coreWound: "It's not okay to be too functional or too happy",
     woundOrigin: "As a child, you felt a deep sense of abandonment or loss — a feeling that something essential was missing. You turned inward, developing a rich emotional inner world as both refuge and identity. Suffering became proof of depth; ordinariness felt like death.",
     description: [
@@ -369,6 +373,7 @@ const TYPES = {
     triad: "Rejection",
     coreDesire: "To be capable and competent",
     coreFear: "Being helpless, useless, or overwhelmed",
+    gifts: ["Intellectual depth, curiosity, and analytical precision", "The ability to think independently and objectively", "Focus, expertise, and true mastery of their domain", "Calm, clear-headed perspective in complex situations", "A respect for knowledge and truth above all else"],
     coreWound: "It's not okay to be comfortable in the world",
     woundOrigin: "As a child, you felt that the world was intrusive, overwhelming, or depleting. You discovered that the mind was a safe harbor — a place where you could retreat, observe, and make sense of things without being drained. Knowledge became your fortress.",
     description: [
@@ -459,6 +464,7 @@ const TYPES = {
     triad: "Reactive",
     coreDesire: "To have security and support",
     coreFear: "Being without support, guidance, or security",
+    gifts: ["Fierce loyalty and commitment to those they trust", "The ability to anticipate risks and prepare thoroughly", "Courage to question and challenge authority when needed", "Warm, dependable presence that others lean on", "A sharp instinct for spotting what could go wrong"],
     coreWound: "It's not okay to trust yourself",
     woundOrigin: "As a child, you experienced an environment where trust was unreliable — authority figures were inconsistent, threatening, or untrustworthy. You developed a hypervigilant mind that constantly scans for danger, becoming your own security system in a world that didn't feel safe.",
     description: [
@@ -552,6 +558,7 @@ const TYPES = {
     triad: "Competency",
     coreDesire: "To be satisfied and content",
     coreFear: "Being deprived, trapped in pain, or limited",
+    gifts: ["Infectious optimism and enthusiasm for life", "Creative thinking and generation of bold new ideas", "Resilience and the ability to reframe difficulty", "Spontaneity, playfulness, and genuine joy", "A gift for making experiences feel vivid and worthwhile"],
     coreWound: "It's not okay to depend on anyone for anything",
     woundOrigin: "As a child, you experienced some form of pain, deprivation, or emotional absence that was too much to bear. You discovered that the mind could generate its own pleasure — through planning, fantasizing, and reframing. You learned to outrun pain by always having something to look forward to.",
     description: [
@@ -643,6 +650,7 @@ const TYPES = {
     triad: "Reactive",
     coreDesire: "To protect themselves and control their own destiny",
     coreFear: "Being controlled, harmed, or violated by others",
+    gifts: ["Natural leadership, decisiveness, and commanding presence", "The courage to act when others hesitate", "Fierce protectiveness of people they care about", "Directness, honesty, and intolerance for pretense", "Enormous energy, resilience, and willingness to fight for what matters"],
     coreWound: "It's not okay to be vulnerable or to trust others",
     woundOrigin: "As a child, you encountered a world that required toughness. Vulnerability was punished — by a harsh parent, a dangerous environment, or a culture that rewarded strength and despised weakness. You armored up early, and the armor worked so well it became your identity.",
     description: [
@@ -733,6 +741,7 @@ const TYPES = {
     triad: "Positive Outlook",
     coreDesire: "To have inner peace and harmony",
     coreFear: "Loss, separation, fragmentation, and conflict",
+    gifts: ["The ability to hold space for all perspectives without judgment", "A calming, grounding presence that others deeply feel", "Natural talent for mediation and conflict resolution", "Patience, steadiness, and deep acceptance of others", "An ease with people that creates genuine belonging"],
     coreWound: "It's not okay to assert yourself or be too much",
     woundOrigin: "As a child, you learned that your presence, opinions, and anger were disruptive — that keeping the peace mattered more than expressing yourself. You merged with others' agendas, numbed your own desires, and became the calm center of every storm. But the calm was a forgetting.",
     description: [
@@ -818,308 +827,536 @@ const TYPES = {
   }
 };
 
-// ---- QUIZ QUESTIONS ----
-// Each question has 4 options. Each option awards points to specific types.
-const QUESTIONS = [
-  {
-    prompt: "Situation",
-    text: "You just received unexpected criticism at work. Your first internal reaction is:",
-    options: [
-      { text: "Frustration — you already hold yourself to higher standards than anyone else does", scores: { 1: 3, 3: 1 } },
-      { text: "Hurt — you were just trying to help, and now you feel unappreciated", scores: { 2: 3, 9: 1 } },
-      { text: "Strategizing — already figuring out how to turn this around and come out on top", scores: { 3: 3, 7: 1 } },
-      { text: "Withdrawal — you need space to process this privately before responding", scores: { 4: 2, 5: 2 } }
-    ]
-  },
-  {
-    prompt: "Situation",
-    text: "A friend cancels plans at the last minute. What comes up for you?",
-    options: [
-      { text: "Relief — honestly, more time alone to think or work on your projects", scores: { 5: 3, 1: 1 } },
-      { text: "Anxiety — you start wondering if something's wrong, if they're upset with you", scores: { 6: 3, 2: 1 } },
-      { text: "No big deal — you immediately start thinking of something else fun to do", scores: { 7: 3, 3: 1 } },
-      { text: "Genuinely unbothered — things happen, you'll just go with the flow", scores: { 9: 3, 5: 1 } }
-    ]
-  },
-  {
-    prompt: "Inner Life",
-    text: "When making a big life decision, you trust:",
-    options: [
-      { text: "Your gut instinct — you feel the right answer in your body before your mind catches up", scores: { 8: 3, 9: 1 } },
-      { text: "How it feels emotionally — if it doesn't resonate at a deep level, it's wrong", scores: { 4: 3, 2: 1 } },
-      { text: "Research and analysis — you need to understand all angles before committing", scores: { 5: 3, 6: 1 } },
-      { text: "The counsel of trusted people — you want to know what those you respect would do", scores: { 6: 2, 2: 2 } }
-    ]
-  },
-  {
-    prompt: "Motivation",
-    text: "What secretly motivates you most?",
-    options: [
-      { text: "Being seen as competent and capable — someone who delivers results", scores: { 3: 2, 5: 2 } },
-      { text: "Being loved and appreciated — knowing you matter to people", scores: { 2: 3, 9: 1 } },
-      { text: "Having freedom and options — a life that isn't boxed in", scores: { 7: 3, 8: 1 } },
-      { text: "Making things right and fair — a world that works the way it should", scores: { 1: 3, 8: 1 } }
-    ]
-  },
-  {
-    prompt: "Situation",
-    text: "In a group project, you naturally:",
-    options: [
-      { text: "Take charge and delegate — someone has to lead, and you're good at it", scores: { 8: 3, 3: 1 } },
-      { text: "Make sure everyone feels included and the group stays cohesive", scores: { 2: 2, 9: 2 } },
-      { text: "Focus on the quality of the work — details matter more than feelings", scores: { 1: 2, 5: 2 } },
-      { text: "Inject energy and creative ideas — keep things from getting stale", scores: { 7: 2, 4: 2 } }
-    ]
-  },
-  {
-    prompt: "Inner Life",
-    text: "What keeps you up at night?",
-    options: [
-      { text: "Worrying about worst-case scenarios and whether you're prepared enough", scores: { 6: 3, 1: 1 } },
-      { text: "Feeling misunderstood — like no one truly sees who you really are", scores: { 4: 3, 2: 1 } },
-      { text: "Replaying something you could have done better, or an opportunity you missed", scores: { 3: 2, 1: 2 } },
-      { text: "Restless energy — FOMO, ideas racing, the feeling of life passing you by", scores: { 7: 3, 4: 1 } }
-    ]
-  },
-  {
-    prompt: "Relationships",
-    text: "Your relationship pattern tends to be:",
-    options: [
-      { text: "You give more than you receive — and quietly keep score", scores: { 2: 3, 1: 1 } },
-      { text: "You maintain some emotional distance — independence is non-negotiable", scores: { 5: 3, 8: 1 } },
-      { text: "You test people's loyalty and commitment before fully trusting them", scores: { 6: 3, 8: 1 } },
-      { text: "You tend to merge with your partner, adopting their interests and priorities", scores: { 9: 3, 4: 1 } }
-    ]
-  },
-  {
-    prompt: "Emotion",
-    text: "When you're angry, you tend to:",
-    options: [
-      { text: "Express it directly and forcefully — people know exactly where you stand", scores: { 8: 3, 1: 1 } },
-      { text: "Suppress it, then let it out as resentment, criticism, or passive-aggression", scores: { 1: 2, 9: 2 } },
-      { text: "Channel it into productive action — anger is fuel for getting things done", scores: { 3: 2, 7: 2 } },
-      { text: "Turn it inward — anger becomes self-criticism or anxiety", scores: { 4: 2, 6: 2 } }
-    ]
-  },
-  {
-    prompt: "Fear",
-    text: "What do you avoid most?",
-    options: [
-      { text: "Vulnerability and weakness — being seen as someone who can't handle things", scores: { 8: 3, 3: 1 } },
-      { text: "Conflict and disconnection — anything that disrupts harmony or closeness", scores: { 9: 3, 2: 1 } },
-      { text: "Being ordinary or unremarkable — blending in feels like disappearing", scores: { 4: 3, 7: 1 } },
-      { text: "Making mistakes or being wrong — the standards must be upheld", scores: { 1: 3, 6: 1 } }
-    ]
-  },
-  {
-    prompt: "Inner Life",
-    text: "How do you handle emotional pain?",
-    options: [
-      { text: "Push through it — showing weakness isn't an option, and action helps more than feelings", scores: { 8: 2, 3: 2 } },
-      { text: "Reach out for comfort — you process by talking to people who care about you", scores: { 2: 2, 6: 2 } },
-      { text: "Reframe it — find the silver lining, the lesson, something to look forward to", scores: { 7: 3, 9: 1 } },
-      { text: "Sit with it deeply — pain is meaningful, and you'd rather feel it than avoid it", scores: { 4: 3, 5: 1 } }
-    ]
-  },
-  {
-    prompt: "Shadow",
-    text: "What would people be surprised to learn about you?",
-    options: [
-      { text: "How much self-doubt you carry behind the confident exterior", scores: { 3: 3, 6: 1 } },
-      { text: "How much anger you suppress beneath your calm, agreeable surface", scores: { 9: 3, 1: 1 } },
-      { text: "How deeply lonely you feel, even when you have people around you", scores: { 5: 2, 4: 2 } },
-      { text: "How much you need approval, despite appearing self-assured", scores: { 1: 2, 2: 2 } }
-    ]
-  },
-  {
-    prompt: "Childhood",
-    text: "Your childhood strategy for feeling safe was:",
-    options: [
-      { text: "Being good and following the rules — earning love through correctness", scores: { 1: 3, 6: 1 } },
-      { text: "Being helpful and attuned to what others needed", scores: { 2: 3, 9: 1 } },
-      { text: "Being exceptional — standing out through achievement or talent", scores: { 3: 3, 8: 1 } },
-      { text: "Being different — cultivating depth, sensitivity, or a rich inner world", scores: { 4: 3, 7: 1 } }
-    ]
-  },
-  {
-    prompt: "Childhood",
-    text: "Which of these also resonates as a childhood strategy?",
-    options: [
-      { text: "Being independent and self-sufficient — needing as little as possible from others", scores: { 5: 3, 8: 1 } },
-      { text: "Being vigilant and prepared — always thinking ahead about what could go wrong", scores: { 6: 3, 1: 1 } },
-      { text: "Being positive and keeping things light — nobody worries about the happy kid", scores: { 7: 3, 3: 1 } },
-      { text: "Being tough — never letting anyone see you hurt or scared", scores: { 8: 3, 6: 1 } }
-    ]
-  },
-  {
-    prompt: "Relationships",
-    text: "When someone you love is struggling, you:",
-    options: [
-      { text: "Jump in immediately — you physically cannot watch someone suffer without helping", scores: { 2: 3, 8: 1 } },
-      { text: "Give them space unless they explicitly ask — people need room to process", scores: { 5: 3, 9: 1 } },
-      { text: "Analyze the problem and offer clear, practical solutions", scores: { 1: 2, 5: 2 } },
-      { text: "Feel their pain deeply — sometimes too deeply, absorbing their emotions as your own", scores: { 4: 3, 2: 1 } }
-    ]
-  },
-  {
-    prompt: "Energy",
-    text: "What drains your energy the most?",
-    options: [
-      { text: "Incompetence and inefficiency — carelessness in yourself or others", scores: { 1: 2, 3: 2 } },
-      { text: "Neediness and emotional demands — people wanting more than you can give", scores: { 5: 3, 7: 1 } },
-      { text: "Feeling controlled or boxed in — limitations on your freedom of choice", scores: { 7: 2, 8: 2 } },
-      { text: "Dishonesty and betrayal — when trust is broken, everything crumbles", scores: { 6: 3, 8: 1 } }
-    ]
-  },
-  {
-    prompt: "Inner Critic",
-    text: "Your inner voice most often tells you:",
-    options: [
-      { text: "\"You're not good enough\" — a relentless standard you can never meet", scores: { 1: 3, 3: 1 } },
-      { text: "\"Nobody truly gets you\" — a deep sense of being fundamentally different", scores: { 4: 3, 5: 1 } },
-      { text: "\"You can't handle this alone\" — doubt about your own capacity and judgment", scores: { 6: 3, 2: 1 } },
-      { text: "\"You're too much / not enough\" — you oscillate between both extremes", scores: { 8: 2, 9: 2 } }
-    ]
-  },
-  {
-    prompt: "Fulfillment",
-    text: "What gives you the deepest satisfaction?",
-    options: [
-      { text: "Creating something beautiful, meaningful, or emotionally honest", scores: { 4: 2, 1: 2 } },
-      { text: "Knowing you made a real, tangible difference in someone's life", scores: { 2: 3, 3: 1 } },
-      { text: "Mastering something complex — understanding what others can't", scores: { 5: 3, 3: 1 } },
-      { text: "An adventure, a new experience, a moment of pure aliveness", scores: { 7: 3, 8: 1 } }
-    ]
-  },
-  {
-    prompt: "Growth",
-    text: "If you could change one thing about yourself, it would be:",
-    options: [
-      { text: "Being less critical — of yourself and others", scores: { 1: 3, 4: 1 } },
-      { text: "Needing people less — or at least not feeling so anxious about it", scores: { 2: 2, 6: 2 } },
-      { text: "Feeling more at peace with who you are — instead of constantly performing", scores: { 3: 2, 9: 2 } },
-      { text: "Being less intense about everything — finding a middle ground", scores: { 4: 2, 8: 2 } }
-    ]
-  }
+// ---- QUIZ DATA — ROUND 1 (Likert, 2 per type × 9 = 18) ----
+const R1_QUESTIONS = [
+  { type: 1, text: "I feel a moral obligation to meet higher standards than I expect from others." },
+  { type: 1, text: "I automatically notice what's wrong or could be improved, and feel compelled to fix it." },
+  { type: 2, text: "I feel most fulfilled when I'm helping others and making them feel valued." },
+  { type: 2, text: "I naturally tune into others' needs and feelings before attending to my own." },
+  { type: 3, text: "I feel good about myself when I'm seen as competent and successful." },
+  { type: 3, text: "I focus on accomplishing goals — it can be hard for me to slow down or do nothing." },
+  { type: 4, text: "I experience emotions more intensely than most and find deep meaning in beauty and self-expression." },
+  { type: 4, text: "I often feel misunderstood and long to be truly seen for who I am." },
+  { type: 5, text: "I feel drained when others make too many social or emotional demands on me." },
+  { type: 5, text: "I prefer to understand things thoroughly before I act or share my views." },
+  { type: 6, text: "I frequently anticipate what could go wrong and try to prepare for it." },
+  { type: 6, text: "I feel more secure when I have clear expectations and trustworthy people I can rely on." },
+  { type: 7, text: "I feel restless or trapped when stuck in routines or limitations." },
+  { type: 7, text: "I'm drawn to new ideas, experiences, and possibilities — I love keeping my options open." },
+  { type: 8, text: "I feel strong and self-reliant, and I rarely let others see when I'm feeling vulnerable." },
+  { type: 8, text: "I speak directly, dislike weakness, and have no problem taking charge of a situation." },
+  { type: 9, text: "I go out of my way to avoid conflict and keep things peaceful." },
+  { type: 9, text: "I find it easy to see all sides of a situation and to go along with what others want." },
+  { type: 1, text: "I find it hard to relax when I see something that needs correcting or could be done better." },
+  { type: 2, text: "I sense what others need and often find myself offering help before they even ask." },
+  { type: 3, text: "I feel most energized when I'm working toward a meaningful goal and making visible progress." },
+  { type: 4, text: "I often feel fundamentally different from others and search for a place where I truly belong." },
+  { type: 5, text: "I need significant time alone to recharge and I guard my privacy carefully." },
+  { type: 6, text: "I tend to question whether things will work out and look for reassurance or evidence that they will." },
+  { type: 7, text: "I find it easy to stay positive and reframe difficult situations in a more optimistic light." },
+  { type: 8, text: "I naturally push back when I feel someone is trying to control or limit me." },
+  { type: 9, text: "I often put off decisions and find myself drifting toward comfort rather than action." },
 ];
 
+// ---- QUIZ DATA — ROUND 2 (Rank-order pool, 5 per type) ----
+// All statements use "I value..." so every option within a question has the same stem.
+// Each type appears 9 times across 12 questions; 5 statements cycle 0→1→2→3→4→0→1→2→3
+// so worst-case repeat is 2× (statements 0 and 1), most appear only once.
+const R2_POOL = {
+  1: [
+    "I value doing things the right way and holding myself to high standards.",
+    "I value integrity, honesty, and taking responsibility seriously.",
+    "I value fairness and upholding principles, even when it's uncomfortable.",
+    "I value order, precision, and correcting what's wrong.",
+    "I value being morally consistent and beyond reproach.",
+  ],
+  2: [
+    "I value being there for others and making them feel truly cared for.",
+    "I value warmth, generosity, and nurturing the people I love.",
+    "I value creating deep connections and being someone others can rely on.",
+    "I value tuning into others' needs and offering help before being asked.",
+    "I value building meaningful relationships and making others feel seen.",
+  ],
+  3: [
+    "I value achievement, efficiency, and being seen as capable.",
+    "I value setting ambitious goals and doing whatever it takes to reach them.",
+    "I value productivity, results, and making the most of every opportunity.",
+    "I value being recognized for my competence and accomplishments.",
+    "I value adapting to what's needed to succeed and excel.",
+  ],
+  4: [
+    "I value authenticity, originality, and deep emotional truth.",
+    "I value being truly understood and expressing my unique inner world.",
+    "I value depth of feeling and finding meaning in beauty and experience.",
+    "I value self-expression and the freedom to show who I really am.",
+    "I value intensity, depth, and a sense of personal significance.",
+  ],
+  5: [
+    "I value knowledge, independence, and protecting my inner space.",
+    "I value understanding how things work and thinking for myself.",
+    "I value privacy, clear boundaries, and the freedom to observe before engaging.",
+    "I value competence, self-sufficiency, and not needing others to function.",
+    "I value having enough time and space to think things through fully.",
+  ],
+  6: [
+    "I value loyalty, reliability, and being prepared for what's ahead.",
+    "I value trust, security, and having people I can count on.",
+    "I value commitment and knowing where I stand with others.",
+    "I value anticipating risks and being ready for challenges before they arise.",
+    "I value dependable relationships and clear expectations.",
+  ],
+  7: [
+    "I value freedom, variety, and staying open to new experiences.",
+    "I value excitement, creativity, and keeping life spontaneous.",
+    "I value joy, possibility, and the freedom to explore.",
+    "I value keeping my options open and not being tied down.",
+    "I value stimulating ideas and the thrill of what's coming next.",
+  ],
+  8: [
+    "I value strength, directness, and the ability to act decisively.",
+    "I value honesty, courage, and protecting what matters to me.",
+    "I value self-reliance, resilience, and not being controlled by others.",
+    "I value being in control of my own decisions and resources.",
+    "I value taking charge and standing up for what I believe in.",
+  ],
+  9: [
+    "I value peace, harmony, and a sense of inner calm.",
+    "I value acceptance, stability, and keeping relationships smooth.",
+    "I value going with the flow and finding common ground.",
+    "I value being easy to be around and not creating unnecessary conflict.",
+    "I value comfort, consistency, and a life free from tension.",
+  ],
+};
 
-// ---- APPLICATION STATE ----
-let currentQuestion = 0;
-let scores = {};
-let resultType = null;
+// ---- QUIZ DATA — ROUND 3 (Forced choice completions, 5 per type) ----
+// Displayed as: "What's more important to me is... [completion]"
+const R3_POOL = {
+  1: [
+    "to be good, ethical, and beyond reproach",
+    "to do things the right way and correct what's wrong",
+    "to live with integrity and maintain my principles",
+    "to improve myself and the world around me",
+    "to be responsible and never compromise my values",
+  ],
+  2: [
+    "to be loved and feel indispensable to others",
+    "to be needed and to express love through giving",
+    "to feel appreciated for how much I care",
+    "to be close to the people I love and feel their affection",
+    "to make others feel good and know I matter to them",
+  ],
+  3: [
+    "to be admired and seen as successful",
+    "to accomplish meaningful things and be recognized for them",
+    "to win, excel, and prove my worth through results",
+    "to be valued for what I achieve and how I perform",
+    "to feel effective and be respected by others",
+  ],
+  4: [
+    "to be truly known and understood as I am",
+    "to express my unique identity and be seen in my depth",
+    "to feel that my life has beauty, meaning, and significance",
+    "to connect with something rare and emotionally profound",
+    "to be authentic and belong without losing myself",
+  ],
+  5: [
+    "to feel capable and self-sufficient",
+    "to understand the world and protect my inner resources",
+    "to have enough knowledge and space to feel secure",
+    "to think clearly without being pulled into others' emotions",
+    "to be competent and maintain my independence",
+  ],
+  6: [
+    "to feel safe, supported, and certain about what to expect",
+    "to find people and systems I can truly trust",
+    "to be prepared for whatever might go wrong",
+    "to feel a sense of belonging in a reliable community",
+    "to have guidance and know I won't be abandoned",
+  ],
+  7: [
+    "to stay free, stimulated, and open to what's next",
+    "to avoid pain and keep experiencing joy and possibility",
+    "to never feel trapped, limited, or cut off from options",
+    "to be fully alive — curious, playful, and expansive",
+    "to pursue happiness and resist anything that constrains me",
+  ],
+  8: [
+    "to be strong and never be controlled by others",
+    "to protect myself and those I care about from harm",
+    "to have power over my own life and decisions",
+    "to be respected for my strength and directness",
+    "to face challenges head-on and never back down",
+  ],
+  9: [
+    "to have inner peace and avoid conflict at all costs",
+    "to feel connected and accepted without having to fight for it",
+    "to maintain harmony and keep things calm around me",
+    "to feel settled, comfortable, and free from tension",
+    "to be at ease with myself and with those around me",
+  ],
+};
+
+const TOTAL_QUESTIONS = R1_QUESTIONS.length + 12 + R3_POOL[1].length; // 27 + 12 + 5 = 44
+
+const QUESTIONS = []; // legacy placeholder
+
+// ---- STATE ----
+let quizPhase = 'r1';
+let r1Questions = [], r1Index = 0, r1Scores = {};
+let top4Types = [], r2Questions = [], r2Index = 0, r2Scores = {}, r2Submitting = false;
+let top2Types = [], r3Index = 0, r3Scores = {};
+let resultType = null; // set at end of R3, used by results + pathway
 let currentStage = 0;
+let quizHistory = []; // history stack for back navigation
 
-function initScores() {
-  scores = {};
-  for (let i = 1; i <= 9; i++) scores[i] = 0;
+function saveHistory() {
+  quizHistory.push({
+    phase: quizPhase,
+    r1Index, r1Scores: {...r1Scores},
+    r2Index, r2Scores: JSON.parse(JSON.stringify(r2Scores)),
+    r3Index, r3Scores: {...r3Scores},
+    top4Types: [...top4Types], top2Types: [...top2Types],
+  });
+  updateBackButton();
+}
+
+function goBack() {
+  if (quizHistory.length === 0) return;
+  const prev = quizHistory.pop();
+  quizPhase  = prev.phase;
+  r1Index    = prev.r1Index;    r1Scores  = prev.r1Scores;
+  r2Index    = prev.r2Index;    r2Scores  = prev.r2Scores;
+  r3Index    = prev.r3Index;    r3Scores  = prev.r3Scores;
+  top4Types  = prev.top4Types;  top2Types = prev.top2Types;
+  updateBackButton();
+  animateNextQuestion(() => {
+    if (quizPhase === 'r1') renderR1();
+    else if (quizPhase === 'r2') renderR2();
+    else renderR3();
+  });
+}
+
+function updateBackButton() {
+  const btn = document.getElementById('quiz-back-btn');
+  if (btn) btn.style.visibility = quizHistory.length > 0 ? 'visible' : 'hidden';
+}
+
+// ---- UTILITIES ----
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function getCombinations(arr, k) {
+  const result = [];
+  function recurse(start, combo) {
+    if (combo.length === k) { result.push([...combo]); return; }
+    for (let i = start; i < arr.length; i++) recurse(i + 1, [...combo, arr[i]]);
+  }
+  recurse(0, []);
+  return result;
 }
 
 // ---- SCREEN MANAGEMENT ----
 function showScreen(screenId) {
-  document.querySelectorAll('.screen').forEach(s => {
-    s.classList.remove('active', 'fade-in');
-  });
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active', 'fade-in'));
   const screen = document.getElementById(screenId);
   screen.classList.add('active');
-  // Trigger fade-in on next frame
-  requestAnimationFrame(() => {
-    screen.classList.add('fade-in');
-  });
+  requestAnimationFrame(() => screen.classList.add('fade-in'));
   window.scrollTo(0, 0);
 }
 
-// ---- QUIZ ENGINE ----
-function startQuiz() {
-  currentQuestion = 0;
-  initScores();
-  showScreen('quiz');
-  renderQuestion();
+// ---- PROGRESS ----
+function updateProgress(current) {
+  const pct = (current / TOTAL_QUESTIONS) * 100;
+  document.getElementById('progress-bar').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = `${current + 1} / ${TOTAL_QUESTIONS}`;
 }
 
-function renderQuestion() {
-  const q = QUESTIONS[currentQuestion];
+// ---- ANIMATION ----
+function animateNextQuestion(callback) {
   const container = document.getElementById('question-container');
-  const progressBar = document.getElementById('progress-bar');
-  const progressText = document.getElementById('progress-text');
-
-  // Update progress
-  const pct = ((currentQuestion) / QUESTIONS.length) * 100;
-  progressBar.style.width = pct + '%';
-  progressText.textContent = `${currentQuestion + 1} / ${QUESTIONS.length}`;
-
-  // Animate question in
-  container.classList.remove('exit');
-  container.style.display = 'none';
-  requestAnimationFrame(() => {
-    container.style.display = '';
+  container.classList.add('exit');
+  setTimeout(() => {
     container.classList.remove('exit');
-
-    document.getElementById('question-prompt').textContent = q.prompt;
-    document.getElementById('question-text').textContent = q.text;
-
-    const optionsEl = document.getElementById('options');
-    optionsEl.innerHTML = '';
-
-    q.options.forEach((opt, idx) => {
-      const btn = document.createElement('button');
-      btn.className = 'option';
-      btn.textContent = opt.text;
-      btn.style.animationDelay = (idx * 0.08) + 's';
-      btn.addEventListener('click', () => selectOption(idx));
-      optionsEl.appendChild(btn);
+    container.style.display = 'none';
+    requestAnimationFrame(() => {
+      container.style.display = '';
+      callback();
     });
+  }, 300);
+}
+
+// ---- ROUND 1 — LIKERT ----
+function startQuiz() {
+  quizPhase = 'r1';
+  r1Scores = {};
+  for (let i = 1; i <= 9; i++) r1Scores[i] = 0;
+  r1Questions = shuffle([...R1_QUESTIONS]);
+  r1Index = 0;
+  quizHistory = [];
+  showScreen('quiz');
+  updateBackButton();
+  renderR1();
+}
+
+function renderR1() {
+  const q = r1Questions[r1Index];
+  updateProgress(r1Index);
+
+  document.getElementById('question-prompt').textContent = 'How much does this resonate with you?';
+  document.getElementById('question-text').textContent = q.text;
+
+  const optionsEl = document.getElementById('options');
+  optionsEl.className = 'options';
+  optionsEl.innerHTML = '';
+
+  const likert = [
+    { text: 'Strongly agree',    value: 5 },
+    { text: 'Agree',             value: 4 },
+    { text: 'Neutral',           value: 3 },
+    { text: 'Disagree',          value: 2 },
+    { text: 'Strongly disagree', value: 1 },
+  ];
+
+  likert.forEach((opt, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'option';
+    btn.textContent = opt.text;
+    btn.style.animationDelay = (idx * 0.06) + 's';
+    btn.addEventListener('click', () => {
+      saveHistory();
+      btn.classList.add('selected');
+      r1Scores[q.type] += opt.value;
+      setTimeout(() => {
+        r1Index++;
+        if (r1Index >= r1Questions.length) finishR1();
+        else animateNextQuestion(renderR1);
+      }, 350);
+    });
+    optionsEl.appendChild(btn);
   });
 }
 
-function selectOption(idx) {
-  const q = QUESTIONS[currentQuestion];
-  const selected = q.options[idx];
-
-  // Apply scores
-  for (const [type, pts] of Object.entries(selected.scores)) {
-    scores[parseInt(type)] += pts;
-  }
-
-  // Visual feedback
-  const options = document.querySelectorAll('.option');
-  options[idx].classList.add('selected');
-
-  // Advance after short delay
-  setTimeout(() => {
-    currentQuestion++;
-    if (currentQuestion >= QUESTIONS.length) {
-      calculateResults();
-    } else {
-      const container = document.getElementById('question-container');
-      container.classList.add('exit');
-      setTimeout(() => renderQuestion(), 300);
-    }
-  }, 350);
+function finishR1() {
+  top4Types = Object.entries(r1Scores)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 4)
+    .map(([t]) => parseInt(t));
+  startR2();
 }
 
-// ---- RESULTS ----
-function calculateResults() {
-  // Find top type
-  let maxScore = 0;
-  let topType = 1;
-  for (let i = 1; i <= 9; i++) {
-    if (scores[i] > maxScore) {
-      maxScore = scores[i];
-      topType = i;
-    }
+// ---- ROUND 2 — RANK ORDER (round-robin) ----
+function startR2() {
+  quizPhase = 'r2';
+  r2Scores = {};
+  top4Types.forEach(t => r2Scores[t] = { points: 0, firstPlaces: 0 });
+  r2Questions = generateR2Questions(top4Types);
+  r2Index = 0;
+  animateNextQuestion(renderR2);
+}
+
+function generateR2Questions(top4) {
+  // C(4,3) = 4 combos × 3 reps = 12 questions
+  // Each type appears 9 times; cycle through its 5 pool statements so
+  // worst-case repeat is 2× (statements 0 and 1), rest appear only once
+  const combos = getCombinations(top4, 3);
+  const questions = [];
+  const stmtCounter = {};
+  top4.forEach(t => stmtCounter[t] = 0);
+  for (let rep = 0; rep < 3; rep++) {
+    combos.forEach(combo => {
+      questions.push({
+        types: [...combo],
+        statements: combo.map(t => {
+          const poolSize = R2_POOL[t].length;
+          const stmt = { type: t, text: R2_POOL[t][stmtCounter[t] % poolSize] };
+          stmtCounter[t]++;
+          return stmt;
+        })
+      });
+    });
   }
-  resultType = topType;
+  return shuffle(questions);
+}
 
-  // Complete progress bar
+function renderR2() {
+  const q = r2Questions[r2Index];
+  updateProgress(R1_QUESTIONS.length + r2Index);
+
+  document.getElementById('question-prompt').textContent = 'Rank these from most to least true for you';
+  document.getElementById('question-text').textContent = '';
+
+  r2Submitting = false;
+  const optionsEl = document.getElementById('options');
+  optionsEl.className = 'options rank-options';
+  optionsEl.innerHTML = '';
+
+  let ranking = [];
+  const displayStatements = shuffle([...q.statements]);
+
+  displayStatements.forEach(stmt => {
+    const card = document.createElement('div');
+    card.className = 'rank-card';
+    card.dataset.type = stmt.type;
+
+    const badge = document.createElement('span');
+    badge.className = 'rank-badge';
+
+    const text = document.createElement('span');
+    text.className = 'rank-text';
+    text.textContent = stmt.text;
+
+    card.appendChild(badge);
+    card.appendChild(text);
+
+    card.addEventListener('click', () => {
+      if (r2Submitting) return;
+      const pos = ranking.indexOf(stmt.type);
+      if (pos !== -1) {
+        ranking = ranking.slice(0, pos);
+      } else if (ranking.length < 3) {
+        ranking.push(stmt.type);
+      }
+
+      // Refresh all card states
+      displayStatements.forEach(s => {
+        const c = optionsEl.querySelector(`.rank-card[data-type="${s.type}"]`);
+        const b = c.querySelector('.rank-badge');
+        const p = ranking.indexOf(s.type);
+        c.className = 'rank-card' + (p !== -1 ? ` ranked rank-${p + 1}` : '');
+        b.textContent = p !== -1 ? p + 1 : '';
+      });
+
+      if (ranking.length === 3) {
+        r2Submitting = true;
+        setTimeout(() => submitR2Ranking([...ranking]), 400);
+      }
+    });
+
+    optionsEl.appendChild(card);
+  });
+}
+
+function submitR2Ranking(ranking) {
+  saveHistory();
+  const pts = [3, 2, 1];
+  ranking.forEach((typeNum, i) => {
+    r2Scores[typeNum].points += pts[i];
+    if (i === 0) r2Scores[typeNum].firstPlaces++;
+  });
+  r2Index++;
+  if (r2Index >= r2Questions.length) finishR2();
+  else animateNextQuestion(renderR2);
+}
+
+function finishR2() {
+  top2Types = [...top4Types]
+    .sort((a, b) => {
+      if (r2Scores[b].points !== r2Scores[a].points) return r2Scores[b].points - r2Scores[a].points;
+      if (r2Scores[b].firstPlaces !== r2Scores[a].firstPlaces) return r2Scores[b].firstPlaces - r2Scores[a].firstPlaces;
+      return r1Scores[b] - r1Scores[a];
+    })
+    .slice(0, 2);
+  startR3();
+}
+
+// ---- ROUND 3 — FORCED CHOICE ----
+function startR3() {
+  quizPhase = 'r3';
+  r3Scores = { [top2Types[0]]: 0, [top2Types[1]]: 0 };
+  r3Index = 0;
+  animateNextQuestion(renderR3);
+}
+
+function renderR3() {
+  const [typeA, typeB] = top2Types;
+  updateProgress(R1_QUESTIONS.length + r2Questions.length + r3Index);
+
+  document.getElementById('question-prompt').textContent = 'Which feels truer?';
+  document.getElementById('question-text').textContent = "What's more important to me is...";
+
+  const optionsEl = document.getElementById('options');
+  optionsEl.className = 'options';
+  optionsEl.innerHTML = '';
+
+  const options = shuffle([
+    { type: typeA, text: R3_POOL[typeA][r3Index] },
+    { type: typeB, text: R3_POOL[typeB][r3Index] },
+  ]);
+
+  options.forEach((opt, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'option';
+    btn.textContent = opt.text;
+    btn.style.animationDelay = (idx * 0.08) + 's';
+    btn.addEventListener('click', () => {
+      saveHistory();
+      btn.classList.add('selected');
+      r3Scores[opt.type]++;
+      setTimeout(() => {
+        r3Index++;
+        const total = R3_POOL[typeA].length;
+        if (r3Index >= total) finishR3();
+        else animateNextQuestion(renderR3);
+      }, 350);
+    });
+    optionsEl.appendChild(btn);
+  });
+}
+
+function finishR3() {
+  const [a, b] = top2Types;
+  resultType = r3Scores[a] >= r3Scores[b] ? a : b;
   document.getElementById('progress-bar').style.width = '100%';
-
   setTimeout(() => showResults(), 400);
+}
+
+// ---- SCORE NORMALIZATION ----
+// Puts all 9 types on a comparable 0-100 scale regardless of how many rounds they reached.
+// R1 max = (questions per type × 5), R2 max = 27pts (9 appearances × 3), R3 max = 5 wins.
+function getNormalizedScore(type) {
+  const r1Max = R1_QUESTIONS.filter(q => q.type === type).length * 5;
+  const r1 = (r1Scores[type] || 0) / r1Max;
+  if (top2Types.includes(type)) {
+    const r2 = r2Scores[type].points / 27;
+    const r3 = (r3Scores[type] || 0) / 5;
+    return Math.round((r1 * 0.33 + r2 * 0.33 + r3 * 0.34) * 100);
+  }
+  if (top4Types.includes(type)) {
+    const r2 = r2Scores[type].points / 27;
+    return Math.round((r1 * 0.50 + r2 * 0.50) * 100);
+  }
+  return Math.round(r1 * 100);
+}
+
+// Returns the highest-scoring type in each of the two centers that aren't the dominant type's center.
+function getSecondaryTypes() {
+  const centers = {
+    body:  [1, 8, 9],
+    heart: [2, 3, 4],
+    head:  [5, 6, 7],
+  };
+  const centerLabels = { body: 'Body Center', heart: 'Heart Center', head: 'Head Center' };
+  const dominantCenter = Object.keys(centers).find(c => centers[c].includes(resultType));
+  const secondaries = [];
+  Object.entries(centers).forEach(([center, types]) => {
+    if (center === dominantCenter) return;
+    const best = [...types].sort((a, b) => getNormalizedScore(b) - getNormalizedScore(a))[0];
+    secondaries.push({ type: best, centerLabel: centerLabels[center] });
+  });
+  return secondaries;
 }
 
 function showResults() {
   const type = TYPES[resultType];
+  const secondaries = getSecondaryTypes();
 
+  // Dominant type
   document.getElementById('type-number').textContent = resultType;
   document.getElementById('type-name').textContent = type.name;
   document.getElementById('type-tagline').textContent = type.tagline;
@@ -1128,32 +1365,92 @@ function showResults() {
   const descEl = document.getElementById('type-description');
   descEl.innerHTML = type.description.map(p => `<p>${p}</p>`).join('');
 
-  // Scores chart
+  // Gifts, motivation, fears
+  const profileEl = document.getElementById('type-profile');
+  profileEl.innerHTML = `
+    <div class="profile-grid">
+      <div class="profile-card">
+        <h4 class="profile-card-title">Gifts &amp; Strengths</h4>
+        <ul class="profile-list">
+          ${type.gifts.map(g => `<li>${g}</li>`).join('')}
+        </ul>
+      </div>
+      <div class="profile-card">
+        <h4 class="profile-card-title">Core Motivation</h4>
+        <p class="profile-text">${type.coreDesire}</p>
+        <h4 class="profile-card-title profile-card-title--fear">Core Fear</h4>
+        <p class="profile-text">${type.coreFear}</p>
+      </div>
+    </div>
+  `;
+
+  // Secondary types
+  const secEl = document.getElementById('secondary-types');
+  secEl.innerHTML = `
+    <h3 class="secondary-heading">Influential Types</h3>
+    <p class="secondary-subheading">Your highest type in each of the other two centers</p>
+    <div class="secondary-cards">
+      ${secondaries.map(s => `
+        <div class="secondary-card">
+          <div class="secondary-badge">${s.type}</div>
+          <div class="secondary-info">
+            <span class="secondary-center">${s.centerLabel}</span>
+            <span class="secondary-name">${TYPES[s.type].name}</span>
+            <span class="secondary-tagline">${TYPES[s.type].tagline}</span>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  // Normalized scores chart
   const chartEl = document.getElementById('scores-chart');
   chartEl.innerHTML = '';
-  const maxScore = Math.max(...Object.values(scores));
+  const allScores = {};
+  for (let i = 1; i <= 9; i++) allScores[i] = getNormalizedScore(i);
+  const scoreValues = Object.values(allScores);
+  const maxNorm = Math.max(...scoreValues);
+  const minNorm = Math.min(...scoreValues);
+  const scoreRange = maxNorm - minNorm;
 
-  // Sort by score descending
-  const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
-  sorted.forEach(([typeNum, score]) => {
-    const pct = maxScore > 0 ? (score / maxScore) * 100 : 0;
-    const isTop = parseInt(typeNum) === resultType;
+  const secondaryTypes = secondaries.map(s => s.type);
+  // Fixed order grouped by center: Body (1,8,9) → Heart (2,3,4) → Head (5,6,7)
+  const centeredOrder = [
+    { label: 'Body', types: [1, 8, 9] },
+    { label: 'Heart', types: [2, 3, 4] },
+    { label: 'Head', types: [5, 6, 7] },
+  ];
+  let idx = 0;
+  centeredOrder.forEach(({ label, types }) => {
+    const groupHeader = document.createElement('p');
+    groupHeader.className = 'score-group-label';
+    groupHeader.textContent = label;
+    chartEl.appendChild(groupHeader);
+    types.forEach(t => {
+      const score = allScores[t];
+      const typeNum = t;
+    // Min-max scale: lowest type = ~8% bar, highest = 100%, amplifies visual spread
+    const pct = scoreRange > 0 ? 8 + ((score - minNorm) / scoreRange) * 92 : 100;
+    const isDominant = t === resultType;
+    const isSecondary = secondaryTypes.includes(t);
+    const fillClass = isDominant ? 'top-type' : isSecondary ? 'secondary-type' : '';
+
     const row = document.createElement('div');
     row.className = 'score-row';
     row.innerHTML = `
       <span class="score-label">${typeNum}: ${TYPES[typeNum].name}</span>
       <div class="score-bar-container">
-        <div class="score-bar-fill ${isTop ? 'top-type' : ''}" style="width: 0%"></div>
+        <div class="score-bar-fill ${fillClass}" style="width: 0%"></div>
       </div>
-      <span class="score-value">${score}</span>
     `;
     chartEl.appendChild(row);
 
-    // Animate bar
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        row.querySelector('.score-bar-fill').style.width = pct + '%';
-      }, 100);
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          row.querySelector('.score-bar-fill').style.width = pct + '%';
+        }, 80 + idx * 40);
+      });
+      idx++;
     });
   });
 
@@ -1164,13 +1461,11 @@ function showResults() {
     <p>${type.triadDescription}</p>
   `;
 
-  // Add type-specific points to the SVG
-  renderResultsWheel();
-
+  renderResultsWheel(secondaryTypes);
   showScreen('results');
 }
 
-function renderResultsWheel() {
+function renderResultsWheel(secondaryTypes = []) {
   const svg = document.getElementById('results-svg');
 
   // Point positions for types 1-9 around the enneagram (9 at top)
@@ -1192,26 +1487,25 @@ function renderResultsWheel() {
   for (let i = 1; i <= 9; i++) {
     const pos = positions[i];
     const isResult = i === resultType;
+    const isSecondary = secondaryTypes.includes(i);
 
     // Circle
     const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     circle.setAttribute('cx', pos.x);
     circle.setAttribute('cy', pos.y);
-    circle.setAttribute('r', isResult ? 12 : 5);
-    circle.setAttribute('fill', isResult ? '#c9a84c' : '#c9a84c33');
+    circle.setAttribute('r', isResult ? 12 : isSecondary ? 8 : 5);
+    circle.setAttribute('fill', isResult ? '#c9a84c' : isSecondary ? '#c9a84c66' : '#c9a84c22');
     circle.setAttribute('class', 'result-point');
-    if (isResult) {
-      circle.setAttribute('filter', 'url(#glow)');
-    }
+    if (isResult) circle.setAttribute('filter', 'url(#glow)');
     svg.appendChild(circle);
 
     // Label
     const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     text.setAttribute('x', pos.x);
-    text.setAttribute('y', pos.y + (isResult ? 5 : 4));
+    text.setAttribute('y', pos.y + (isResult ? 5 : isSecondary ? 4 : 4));
     text.setAttribute('text-anchor', 'middle');
-    text.setAttribute('fill', isResult ? '#07070d' : '#c9a84c66');
-    text.setAttribute('font-size', isResult ? '14' : '10');
+    text.setAttribute('fill', isResult ? '#07070d' : isSecondary ? '#c9a84c' : '#c9a84c55');
+    text.setAttribute('font-size', isResult ? '14' : isSecondary ? '11' : '10');
     text.setAttribute('font-family', 'Inter, sans-serif');
     text.setAttribute('font-weight', isResult ? '600' : '400');
     text.setAttribute('class', 'result-label');
