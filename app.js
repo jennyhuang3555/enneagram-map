@@ -1317,21 +1317,28 @@ function finishR3() {
 }
 
 // ---- SCORE NORMALIZATION ----
-// Puts all 9 types on a comparable 0-100 scale regardless of how many rounds they reached.
-// R1 max = (questions per type × 5), R2 max = 27pts (9 appearances × 3), R3 max = 5 wins.
+// R1 is the primary signal for all 9 types (0–100).
+// Advancing rounds add small capped bonuses so tier gaps stay marginal:
+//   Top-4: R1 score + up to +8 from R2 performance
+//   Top-2: above    + up to +5 more from R3 performance
+// This ensures R2 types are only marginally ahead of R1-only types,
+// and the R3 winner is only slightly ahead of the runner-up.
 function getNormalizedScore(type) {
   const r1Max = R1_QUESTIONS.filter(q => q.type === type).length * 5;
-  const r1 = (r1Scores[type] || 0) / r1Max;
-  if (top2Types.includes(type)) {
-    const r2 = r2Scores[type].points / 27;
-    const r3 = (r3Scores[type] || 0) / 5;
-    return Math.round((r1 * 0.33 + r2 * 0.33 + r3 * 0.34) * 100);
+  const r1Score = (r1Scores[type] || 0) / r1Max * 100;
+
+  if (!top4Types.includes(type)) {
+    return Math.round(r1Score);
   }
-  if (top4Types.includes(type)) {
-    const r2 = r2Scores[type].points / 27;
-    return Math.round((r1 * 0.50 + r2 * 0.50) * 100);
+
+  const r2Bonus = (r2Scores[type].points / 27) * 8; // up to +8
+
+  if (!top2Types.includes(type)) {
+    return Math.round(r1Score + r2Bonus);
   }
-  return Math.round(r1 * 100);
+
+  const r3Bonus = ((r3Scores[type] || 0) / 5) * 5; // up to +5
+  return Math.round(r1Score + r2Bonus + r3Bonus);
 }
 
 // Returns the highest-scoring type in each of the two centers that aren't the dominant type's center.
