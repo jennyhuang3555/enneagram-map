@@ -829,33 +829,33 @@ const TYPES = {
 
 // ---- QUIZ DATA — ROUND 1 (Likert, 2 per type × 9 = 18) ----
 const R1_QUESTIONS = [
-  { type: 1, text: "I feel a moral obligation to meet higher standards than I expect from others." },
+  { type: 1, text: "I feel a moral obligation to hold myself to higher standards — even when others don't share them." },
   { type: 1, text: "I automatically notice what's wrong or could be improved, and feel compelled to fix it." },
-  { type: 2, text: "I feel most fulfilled when I'm helping others and making them feel valued." },
+  { type: 2, text: "I feel most like myself when I'm caring for others — and I worry a little when no one seems to need me." },
   { type: 2, text: "I naturally tune into others' needs and feelings before attending to my own." },
-  { type: 3, text: "I feel good about myself when I'm seen as competent and successful." },
-  { type: 3, text: "I focus on accomplishing goals — it can be hard for me to slow down or do nothing." },
-  { type: 4, text: "I experience emotions more intensely than most and find deep meaning in beauty and self-expression." },
+  { type: 3, text: "I feel good about myself mainly when others see me as successful and capable — external recognition matters a lot to my sense of worth." },
+  { type: 3, text: "I'm always moving toward a goal — it can be hard for me to slow down or do nothing." },
+  { type: 4, text: "I experience my emotions more intensely and personally than most people seem to — they feel like core truths, not just reactions." },
   { type: 4, text: "I often feel misunderstood and long to be truly seen for who I am." },
-  { type: 5, text: "I feel drained when others make too many social or emotional demands on me." },
+  { type: 5, text: "I feel like social and emotional demands cost me something. I need to carefully manage how much I give, or I feel depleted and invaded." },
   { type: 5, text: "I prefer to understand things thoroughly before I act or share my views." },
   { type: 6, text: "I frequently anticipate what could go wrong and try to prepare for it." },
-  { type: 6, text: "I feel more secure when I have clear expectations and trustworthy people I can rely on." },
-  { type: 7, text: "I feel restless or trapped when stuck in routines or limitations." },
+  { type: 6, text: "I feel more secure when I know where I stand. Clear expectations and proven trustworthiness matter more to me than most people realize." },
+  { type: 7, text: "I feel restless when things get repetitive or heavy — I tend to move toward what's interesting, new, or exciting rather than sitting with discomfort." },
   { type: 7, text: "I'm drawn to new ideas, experiences, and possibilities — I love keeping my options open." },
-  { type: 8, text: "I feel strong and self-reliant, and I rarely let others see when I'm feeling vulnerable." },
-  { type: 8, text: "I speak directly, dislike weakness, and have no problem taking charge of a situation." },
-  { type: 9, text: "I go out of my way to avoid conflict and keep things peaceful." },
+  { type: 8, text: "I tend to project strength and self-reliance — and I'm protective of my softer side, sharing it only with people I deeply trust." },
+  { type: 8, text: "I speak my mind directly, take charge naturally, and have little patience for indecisiveness or people who won't say what they mean." },
+  { type: 9, text: "I tend to smooth over tensions and accommodate others' preferences to avoid conflict." },
   { type: 9, text: "I find it easy to see all sides of a situation and to go along with what others want." },
-  { type: 1, text: "I find it hard to relax when I see something that needs correcting or could be done better." },
+  { type: 1, text: "I find it hard to relax knowing something is imperfect or not yet corrected — even in situations where others seem unbothered." },
   { type: 2, text: "I sense what others need and often find myself offering help before they even ask." },
-  { type: 3, text: "I feel most energized when I'm working toward a meaningful goal and making visible progress." },
-  { type: 4, text: "I often feel fundamentally different from others and search for a place where I truly belong." },
+  { type: 3, text: "I feel most alive when I'm excelling at something and being recognized for it — I run on momentum and results." },
+  { type: 4, text: "I often feel like I'm fundamentally different from others, like there's something missing in me that others take for granted." },
   { type: 5, text: "I need significant time alone to recharge and I guard my privacy carefully." },
-  { type: 6, text: "I tend to question whether things will work out and look for reassurance or evidence that they will." },
+  { type: 6, text: "I tend to scan for what could go wrong and find it hard to fully trust — even situations or people that seem safe." },
   { type: 7, text: "I find it easy to stay positive and reframe difficult situations in a more optimistic light." },
   { type: 8, text: "I naturally push back when I feel someone is trying to control or limit me." },
-  { type: 9, text: "I often put off decisions and find myself drifting toward comfort rather than action." },
+  { type: 9, text: "I often lose track of what I want in the middle of a situation — I drift along, and then realize I've been going with the flow without meaning to." },
 ];
 
 // ---- QUIZ DATA — ROUND 2 (Rank-order pool, 5 per type) ----
@@ -864,46 +864,46 @@ const R1_QUESTIONS = [
 // so worst-case repeat is 2× (statements 0 and 1), most appear only once.
 const R2_POOL = {
   1: [
-    "I value doing things the right way and holding myself to high standards.",
-    "I value integrity, honesty, and taking responsibility seriously.",
+    "I value doing things correctly, holding myself to standards that feel non-negotiable.",
+    "I value integrity above almost everything, especially being someone who can't be faulted morally.",
     "I value fairness and upholding principles, even when it's uncomfortable.",
-    "I value order, precision, and correcting what's wrong.",
-    "I value being morally consistent and beyond reproach.",
+    "I value precision and getting things right — I notice errors and feel a pull to address them.",
+    "I value being beyond reproach, with a deep discomfort about being in the wrong.",
   ],
   2: [
-    "I value being there for others and making them feel truly cared for.",
-    "I value warmth, generosity, and nurturing the people I love.",
-    "I value creating deep connections and being someone others can rely on.",
+    "I value being the person others turn to when they need care or support.",
+    "I value giving to others, often more naturally than I receive.",
+    "I value creating deep, supportive connections and being someone others can rely on.",
     "I value tuning into others' needs and offering help before being asked.",
-    "I value building meaningful relationships and making others feel seen.",
+    "I value making people feel genuinely loved and cared for in ways that go beyond the surface.",
   ],
   3: [
     "I value achievement, efficiency, and being seen as capable.",
-    "I value setting ambitious goals and doing whatever it takes to reach them.",
-    "I value productivity, results, and making the most of every opportunity.",
+    "I value setting ambitious goals and finding the most efficient path to reaching them.",
+    "I value being productive and effective in ways that generate real, visible results.",
     "I value being recognized for my competence and accomplishments.",
-    "I value adapting to what's needed to succeed and excel.",
+    "I value knowing how to present myself in ways that land well and get results.",
   ],
   4: [
-    "I value authenticity, originality, and deep emotional truth.",
+    "I value being genuine over being likeable, even if it means being harder to understand.",
     "I value being truly understood and expressing my unique inner world.",
-    "I value depth of feeling and finding meaning in beauty and experience.",
-    "I value self-expression and the freedom to show who I really am.",
-    "I value intensity, depth, and a sense of personal significance.",
+    "I value depth of feeling over comfort or emotional ease.",
+    "I value self-expression as a way of being truly seen rather than flattened into something ordinary.",
+    "I value intensity and depth in my experiences and relationships.",
   ],
   5: [
     "I value knowledge, independence, and protecting my inner space.",
-    "I value understanding how things work and thinking for myself.",
+    "I value building my own thorough understanding rather than relying on others' conclusions.",
     "I value privacy, clear boundaries, and the freedom to observe before engaging.",
-    "I value competence, self-sufficiency, and not needing others to function.",
-    "I value having enough time and space to think things through fully.",
+    "I value self-sufficiency and being capable enough not to depend on others.",
+    "I value having enough time and mental space to feel genuinely prepared before I act.",
   ],
   6: [
     "I value loyalty, reliability, and being prepared for what's ahead.",
     "I value trust, security, and having people I can count on.",
     "I value commitment and knowing where I stand with others.",
-    "I value anticipating risks and being ready for challenges before they arise.",
-    "I value dependable relationships and clear expectations.",
+    "I value anticipating what might go wrong and having a plan ready before problems arise.",
+    "I value clear commitments and stable expectations in my relationships and environments.",
   ],
   7: [
     "I value freedom, variety, and staying open to new experiences.",
@@ -917,14 +917,14 @@ const R2_POOL = {
     "I value honesty, courage, and protecting what matters to me.",
     "I value self-reliance, resilience, and not being controlled by others.",
     "I value being in control of my own decisions and resources.",
-    "I value taking charge and standing up for what I believe in.",
+    "I value taking charge when something needs to happen and no one else is stepping up.",
   ],
   9: [
     "I value peace, harmony, and a sense of inner calm.",
     "I value acceptance, stability, and keeping relationships smooth.",
     "I value going with the flow and finding common ground.",
     "I value being easy to be around and not creating unnecessary conflict.",
-    "I value comfort, consistency, and a life free from tension.",
+    "I value feeling settled and undisturbed, with as little friction or tension as possible.",
   ],
 };
 
@@ -933,7 +933,7 @@ const R2_POOL = {
 const R3_POOL = {
   1: [
     "to be good, ethical, and beyond reproach",
-    "to do things the right way and correct what's wrong",
+    "to constantly work toward being better and correcting what falls short",
     "to live with integrity and maintain my principles",
     "to improve myself and the world around me",
     "to be responsible and never compromise my values",
@@ -947,20 +947,20 @@ const R3_POOL = {
   ],
   3: [
     "to be admired and seen as successful",
-    "to accomplish meaningful things and be recognized for them",
+    "to accomplish impressive things and be recognized for them",
     "to win, excel, and prove my worth through results",
-    "to be valued for what I achieve and how I perform",
+    "to be seen as someone who achieves and performs at a high level",
     "to feel effective and be respected by others",
   ],
   4: [
     "to be truly known and understood as I am",
     "to express my unique identity and be seen in my depth",
-    "to feel that my life has beauty, meaning, and significance",
-    "to connect with something rare and emotionally profound",
+    "to feel that my life has meaning and hasn't dissolved into the ordinary",
+    "to find people and experiences that meet me in depth and feel profound",
     "to be authentic and belong without losing myself",
   ],
   5: [
-    "to feel capable and self-sufficient",
+    "to feel capable and self-contained, without needing to depend on others",
     "to understand the world and protect my inner resources",
     "to have enough knowledge and space to feel secure",
     "to think clearly without being pulled into others' emotions",
@@ -976,22 +976,22 @@ const R3_POOL = {
   7: [
     "to stay free, stimulated, and open to what's next",
     "to avoid pain and keep experiencing joy and possibility",
-    "to never feel trapped, limited, or cut off from options",
-    "to be fully alive — curious, playful, and expansive",
-    "to pursue happiness and resist anything that constrains me",
+    "to keep my options open and avoid feeling boxed in or constrained",
+    "to stay curious, stimulated, and moving toward what's alive",
+    "to keep moving toward what's enjoyable and interesting and not constrained",
   ],
   8: [
     "to be strong and never be controlled by others",
     "to protect myself and those I care about from harm",
     "to have power over my own life and decisions",
     "to be respected for my strength and directness",
-    "to face challenges head-on and never back down",
+    "to meet difficulty directly without flinching or backing down",
   ],
   9: [
-    "to have inner peace and avoid conflict at all costs",
+    "to have inner peace and preserve harmony wherever I can",
     "to feel connected and accepted without having to fight for it",
     "to maintain harmony and keep things calm around me",
-    "to feel settled, comfortable, and free from tension",
+    "to feel undisturbed and at ease, with no friction or urgency pulling at me",
     "to be at ease with myself and with those around me",
   ],
 };
@@ -1008,6 +1008,12 @@ let top2Types = [], r3Index = 0, r3Scores = {};
 let resultType = null; // set at end of R3, used by results + pathway
 let currentStage = 0;
 let quizHistory = []; // history stack for back navigation
+
+// ---- ANSWER TRACKING (for Firestore) ----
+let r1Answers = []; // [{question, type, score}]
+let r2Answers = []; // [{statements: [{type, text}], ranking: [type, type, type]}]
+let r3Answers = []; // [{typeA, textA, typeB, textB, chosen}]
+let userData = { name: '', email: '' };
 
 function saveHistory() {
   quizHistory.push({
@@ -1099,6 +1105,8 @@ function startQuiz() {
   r1Questions = shuffle([...R1_QUESTIONS]);
   r1Index = 0;
   quizHistory = [];
+  r1Answers = []; r2Answers = []; r3Answers = [];
+  userData = { name: '', email: '' };
   showScreen('quiz');
   updateBackButton();
   renderR1();
@@ -1132,6 +1140,7 @@ function renderR1() {
       saveHistory();
       btn.classList.add('selected');
       r1Scores[q.type] += opt.value;
+      r1Answers.push({ question: q.text, type: q.type, score: opt.value });
       setTimeout(() => {
         r1Index++;
         if (r1Index >= r1Questions.length) finishR1();
@@ -1244,6 +1253,11 @@ function renderR2() {
 
 function submitR2Ranking(ranking) {
   saveHistory();
+  const q = r2Questions[r2Index];
+  r2Answers.push({
+    statements: q.statements.map(s => ({ type: s.type, text: s.text })),
+    ranking
+  });
   const pts = [3, 2, 1];
   ranking.forEach((typeNum, i) => {
     r2Scores[typeNum].points += pts[i];
@@ -1298,6 +1312,11 @@ function renderR3() {
       saveHistory();
       btn.classList.add('selected');
       r3Scores[opt.type]++;
+      r3Answers.push({
+        typeA: options[0].type, textA: options[0].text,
+        typeB: options[1].type, textB: options[1].text,
+        chosen: opt.type
+      });
       setTimeout(() => {
         r3Index++;
         const total = R3_POOL[typeA].length;
@@ -1313,7 +1332,108 @@ function finishR3() {
   const [a, b] = top2Types;
   resultType = r3Scores[a] >= r3Scores[b] ? a : b;
   document.getElementById('progress-bar').style.width = '100%';
-  setTimeout(() => showResults(), 400);
+  setTimeout(() => showScreen('gate'), 400);
+}
+
+function submitGate(event) {
+  event.preventDefault();
+  userData.name  = document.getElementById('gate-name').value.trim();
+  userData.email = document.getElementById('gate-email').value.trim();
+
+  const allScores = {};
+  for (let i = 1; i <= 9; i++) allScores[i] = getNormalizedScore(i);
+
+  const LIKERT_LABELS = { 5: 'Strongly agree', 4: 'Agree', 3: 'Neutral', 2: 'Disagree', 1: 'Strongly disagree' };
+
+  // Normalized scores — sorted highest to lowest
+  const normalizedScoresStr = Object.entries(allScores)
+    .sort((a, b) => b[1] - a[1])
+    .map(([t, s]) => {
+      const tier = top2Types.includes(+t) ? '(R3)' : top4Types.includes(+t) ? '(R2)' : '(R1)';
+      return `Type ${t} ${TYPES[t].name} ${tier}: ${s}`;
+    })
+    .join('\n');
+
+  // Scoring logic narrative
+  const r1SortedStr = Object.entries(r1Scores)
+    .sort((a, b) => b[1] - a[1])
+    .map(([t, s]) => `Type ${t} ${TYPES[t].name}: ${s}/${R1_QUESTIONS.filter(q=>q.type==t).length*5}`)
+    .join(', ');
+
+  const r2SummaryStr = top4Types.map(t =>
+    `Type ${t} ${TYPES[t].name}: ${r2Scores[t].points} pts, ${r2Scores[t].firstPlaces} first-place`
+  ).join(' | ');
+
+  const r3SummaryStr = top2Types.map(t =>
+    `Type ${t} ${TYPES[t].name}: ${r3Scores[t] || 0}/5 wins`
+  ).join(' vs ');
+
+  const scoringLogicStr =
+    `R1 raw scores: ${r1SortedStr}\n` +
+    `→ Top 4 to R2: Types ${top4Types.join(', ')}\n\n` +
+    `R2 points: ${r2SummaryStr}\n` +
+    `→ Top 2 to R3: Types ${top2Types.join(', ')}\n\n` +
+    `R3 wins: ${r3SummaryStr}\n` +
+    `→ Final result: Type ${resultType} — ${TYPES[resultType].name}`;
+
+  // R1 answers with Likert labels
+  const r1AnswersStr = r1Answers
+    .map((a, i) =>
+      `Q${i+1}. [Type ${a.type} — ${TYPES[a.type].name}]\n` +
+      `    "${a.question}"\n` +
+      `    Answer: ${LIKERT_LABELS[a.score]} (${a.score}/5)`
+    )
+    .join('\n\n');
+
+  // R2 rankings with full statement text
+  const r2AnswersStr = r2Answers
+    .map((a, i) => {
+      const ranked = a.ranking.map((t, pos) => {
+        const stmt = a.statements.find(s => s.type === t);
+        return `  ${pos+1}. Type ${t} ${TYPES[t].name}: "${stmt ? stmt.text : ''}"`;
+      }).join('\n');
+      return `Q${i+1}.\n${ranked}`;
+    })
+    .join('\n\n');
+
+  // R3 forced choices
+  const r3AnswersStr = r3Answers
+    .map((a, i) => {
+      const chosenText  = a.chosen === a.typeA ? a.textA : a.textB;
+      const otherType   = a.chosen === a.typeA ? a.typeB : a.typeA;
+      const otherText   = a.chosen === a.typeA ? a.textB : a.textA;
+      return (
+        `Q${i+1}.\n` +
+        `  ✓ Chose Type ${a.chosen} ${TYPES[a.chosen].name}: "...${chosenText}"\n` +
+        `    Over  Type ${otherType} ${TYPES[otherType].name}: "...${otherText}"`
+      );
+    })
+    .join('\n\n');
+
+  // Send email via EmailJS (non-blocking)
+  emailjs.send('service_85x4jxv', 'template_v2qcbdd', {
+    user_name:         userData.name,
+    user_email:        userData.email,
+    result_type:       resultType,
+    type_name:         TYPES[resultType].name,
+    scoring_logic:     scoringLogicStr,
+    normalized_scores: normalizedScoresStr,
+    r1_answers:        r1AnswersStr,
+    r2_answers:        r2AnswersStr,
+    r3_answers:        r3AnswersStr,
+  }).catch(err => console.error('EmailJS error:', err));
+
+  // Also save to Firebase as backup
+  if (typeof window.saveResultsToFirebase === 'function') {
+    window.saveResultsToFirebase({
+      name: userData.name, email: userData.email,
+      resultType, r1Answers, r2Answers, r3Answers,
+      r1Scores, r2Scores, r3Scores,
+      normalizedScores: allScores, top4Types, top2Types,
+    });
+  }
+
+  showResults();
 }
 
 // ---- SCORE NORMALIZATION ----

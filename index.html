@@ -68,6 +68,27 @@
       </div>
     </section>
 
+    <!-- GATE: name + email before results -->
+    <section id="gate" class="screen">
+      <div class="gate-content">
+        <p class="gate-label">Almost there</p>
+        <h2 class="gate-title">Your results are ready</h2>
+        <p class="gate-subtitle">Enter your name and email to see your type.</p>
+        <form id="gate-form" class="gate-form" onsubmit="submitGate(event)">
+          <div class="gate-field">
+            <label for="gate-name">Name</label>
+            <input type="text" id="gate-name" placeholder="Your name" required autocomplete="name" />
+          </div>
+          <div class="gate-field">
+            <label for="gate-email">Email</label>
+            <input type="email" id="gate-email" placeholder="your@email.com" required autocomplete="email" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-large">See My Results</button>
+          <p class="gate-note">No spam. Used only to send you your results.</p>
+        </form>
+      </div>
+    </section>
+
     <!-- RESULTS -->
     <section id="results" class="screen">
       <div class="results-content">
@@ -139,6 +160,40 @@
     </section>
   </div>
 
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init('fSzGjIVe55eVoJY80');</script>
+
+  <!-- Firebase via CDN (module) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDQHKzZfWQAmPIzYRo2HIDGArCcFUESCz8",
+      authDomain: "enneagram-map.firebaseapp.com",
+      projectId: "enneagram-map",
+      storageBucket: "enneagram-map.firebasestorage.app",
+      messagingSenderId: "106590234382",
+      appId: "1:106590234382:web:d085dc70b1120048c4d95f"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Expose save function to global scope so app.js can call it
+    window.saveResultsToFirebase = async function(data) {
+      try {
+        await addDoc(collection(db, "quiz_results"), {
+          ...data,
+          timestamp: serverTimestamp()
+        });
+        console.log("Results saved to Firebase.");
+      } catch (e) {
+        console.error("Firebase write failed:", e);
+      }
+    };
+  </script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,118 @@
+Round,Type Number,Type Name,Statement #,Format / Prompt,Current Statement,Updated Version (your edits)
+R1 — Likert,1,The Reformer,1,How much does this resonate with you? [1–5],I feel a moral obligation to meet higher standards than I expect from others.,"I feel a moral obligation to hold myself to higher standards — even when others don't share them."
+R1 — Likert,1,The Reformer,2,How much does this resonate with you? [1–5],"I automatically notice what's wrong or could be improved, and feel compelled to fix it.",
+R1 — Likert,1,The Reformer,3,How much does this resonate with you? [1–5],I find it hard to relax when I see something that needs correcting or could be done better.,I find it hard to relax knowing something is imperfect or not yet corrected — even in situations where others seem unbothered.
+R1 — Likert,2,The Helper,1,How much does this resonate with you? [1–5],I feel most fulfilled when I'm helping others and making them feel valued.,"I feel most like myself when I'm caring for others — and I worry a little when no one seems to need me."
+R1 — Likert,2,The Helper,2,How much does this resonate with you? [1–5],I naturally tune into others' needs and feelings before attending to my own.,
+R1 — Likert,2,The Helper,3,How much does this resonate with you? [1–5],I sense what others need and often find myself offering help before they even ask.,
+R1 — Likert,3,The Achiever,1,How much does this resonate with you? [1–5],I feel good about myself when I'm seen as competent and successful.,I feel good about myself mainly when others see me as successful and capable — external recognition matters a lot to my sense of worth.
+R1 — Likert,3,The Achiever,2,How much does this resonate with you? [1–5],I focus on accomplishing goals — it can be hard for me to slow down or do nothing.,I'm always moving toward a goal — it can be hard for me to slow down or do nothing
+R1 — Likert,3,The Achiever,3,How much does this resonate with you? [1–5],I feel most energized when I'm working toward a meaningful goal and making visible progress.,"I feel most alive when I'm excelling at something and being recognized for it — I run on momentum and results."
+R1 — Likert,4,The Individualist,1,How much does this resonate with you? [1–5],I experience emotions more intensely than most and find deep meaning in beauty and self-expression.,"I experience my emotions more intensely and personally than most people seem to — they feel like core truths, not just reactions."
+R1 — Likert,4,The Individualist,2,How much does this resonate with you? [1–5],I often feel misunderstood and long to be truly seen for who I am.,
+R1 — Likert,4,The Individualist,3,How much does this resonate with you? [1–5],I often feel fundamentally different from others and search for a place where I truly belong.,"I often feel like I'm fundamentally different from others, like there's something missing in me that others take for granted."
+R1 — Likert,5,The Investigator,1,How much does this resonate with you? [1–5],I feel drained when others make too many social or emotional demands on me.,"I feel like social and emotional demands cost me something. I need to carefully manage how much I give, or I feel depleted and invaded."
+R1 — Likert,5,The Investigator,2,How much does this resonate with you? [1–5],I prefer to understand things thoroughly before I act or share my views.,
+R1 — Likert,5,The Investigator,3,How much does this resonate with you? [1–5],I need significant time alone to recharge and I guard my privacy carefully.,
+R1 — Likert,6,The Loyalist,1,How much does this resonate with you? [1–5],I frequently anticipate what could go wrong and try to prepare for it.,
+R1 — Likert,6,The Loyalist,2,How much does this resonate with you? [1–5],I feel more secure when I have clear expectations and trustworthy people I can rely on.,I feel more secure when I know where I stand. Clear expectations and proven trustworthiness matter more to me than most people realize.
+R1 — Likert,6,The Loyalist,3,How much does this resonate with you? [1–5],I tend to question whether things will work out and look for reassurance or evidence that they will.,I tend to scan for what could go wrong and find it hard to fully trust — even situations or people that seem safe.
+R1 — Likert,7,The Enthusiast,1,How much does this resonate with you? [1–5],I feel restless or trapped when stuck in routines or limitations.,"I feel restless when things get repetitive or heavy — I tend to move toward what's interesting, new, or exciting rather than sitting with discomfort."
+R1 — Likert,7,The Enthusiast,2,How much does this resonate with you? [1–5],"I'm drawn to new ideas, experiences, and possibilities — I love keeping my options open.",
+R1 — Likert,7,The Enthusiast,3,How much does this resonate with you? [1–5],I find it easy to stay positive and reframe difficult situations in a more optimistic light.,
+R1 — Likert,8,The Challenger,1,How much does this resonate with you? [1–5],"I feel strong and self-reliant, and I rarely let others see when I'm feeling vulnerable.","I tend to project strength and self-reliance — and I'm protective of my softer side, sharing it only with people I deeply trust."
+R1 — Likert,8,The Challenger,2,How much does this resonate with you? [1–5],"I speak directly, dislike weakness, and have no problem taking charge of a situation.","I speak my mind directly, take charge naturally, and have little patience for indecisiveness or people who won't say what they mean."
+R1 — Likert,8,The Challenger,3,How much does this resonate with you? [1–5],I naturally push back when I feel someone is trying to control or limit me.,
+R1 — Likert,9,The Peacemaker,1,How much does this resonate with you? [1–5],I go out of my way to avoid conflict and keep things peaceful.,I tend to smooth over tensions and accommodate others' preferences to avoid conflict.
+R1 — Likert,9,The Peacemaker,2,How much does this resonate with you? [1–5],I find it easy to see all sides of a situation and to go along with what others want.,
+R1 — Likert,9,The Peacemaker,3,How much does this resonate with you? [1–5],I often put off decisions and find myself drifting toward comfort rather than action.,"I often lose track of what I want in the middle of a situation — I drift along, and then realize I've been going with the flow without meaning to."
+R2 — Rank order,1,The Reformer,1,"Rank from most to least true (stem: ""I value..."")",I value doing things the right way and holding myself to high standards.,"I value doing things correctly, holding myself to standards that feel non-negotiable."
+R2 — Rank order,1,The Reformer,2,"Rank from most to least true (stem: ""I value..."")","I value integrity, honesty, and taking responsibility seriously.","I value integrity above almost everything, especially being someone who can't be faulted morally."
+R2 — Rank order,1,The Reformer,3,"Rank from most to least true (stem: ""I value..."")","I value fairness and upholding principles, even when it's uncomfortable.",
+R2 — Rank order,1,The Reformer,4,"Rank from most to least true (stem: ""I value..."")","I value order, precision, and correcting what's wrong.",I value precision and getting things right — I notice errors and feel a pull to address them 
+R2 — Rank order,1,The Reformer,5,"Rank from most to least true (stem: ""I value..."")",I value being morally consistent and beyond reproach.,"I value being beyond reproach, with a deep discomfort about being in the wrong"
+R2 — Rank order,2,The Helper,1,"Rank from most to least true (stem: ""I value..."")",I value being there for others and making them feel truly cared for.,I value being the person others turn to when they need care or support.
+R2 — Rank order,2,The Helper,2,"Rank from most to least true (stem: ""I value..."")","I value warmth, generosity, and nurturing the people I love.","I value giving to others, often more naturally than I receive."
+R2 — Rank order,2,The Helper,3,"Rank from most to least true (stem: ""I value..."")",I value creating deep connections and being someone others can rely on.,"I value creating deep, supportive connections and being someone others can rely on."
+R2 — Rank order,2,The Helper,4,"Rank from most to least true (stem: ""I value..."")",I value tuning into others' needs and offering help before being asked.,
+R2 — Rank order,2,The Helper,5,"Rank from most to least true (stem: ""I value..."")",I value building meaningful relationships and making others feel seen.,I value making people feel genuinely loved and cared for in ways that go beyond the surface.
+R2 — Rank order,3,The Achiever,1,"Rank from most to least true (stem: ""I value..."")","I value achievement, efficiency, and being seen as capable.",
+R2 — Rank order,3,The Achiever,2,"Rank from most to least true (stem: ""I value..."")",I value setting ambitious goals and doing whatever it takes to reach them.,I value setting ambitious goals and finding the most efficient path to reaching them
+R2 — Rank order,3,The Achiever,3,"Rank from most to least true (stem: ""I value..."")","I value productivity, results, and making the most of every opportunity.","I value being productive and effective in ways that generate real, visible results."
+R2 — Rank order,3,The Achiever,4,"Rank from most to least true (stem: ""I value..."")",I value being recognized for my competence and accomplishments.,
+R2 — Rank order,3,The Achiever,5,"Rank from most to least true (stem: ""I value..."")",I value adapting to what's needed to succeed and excel.,I value knowing how to present myself in ways that land well and get results.
+R2 — Rank order,4,The Individualist,1,"Rank from most to least true (stem: ""I value..."")","I value authenticity, originality, and deep emotional truth.","I value being genuine over being likeable, even if it means being harder to understand."
+R2 — Rank order,4,The Individualist,2,"Rank from most to least true (stem: ""I value..."")",I value being truly understood and expressing my unique inner world.,
+R2 — Rank order,4,The Individualist,3,"Rank from most to least true (stem: ""I value..."")",I value depth of feeling and finding meaning in beauty and experience.,I value depth of feeling over comfort or emotional ease.
+R2 — Rank order,4,The Individualist,4,"Rank from most to least true (stem: ""I value..."")",I value self-expression and the freedom to show who I really am.,I value self-expression as a way of being truly seen rather than flattened into something ordinary.
+R2 — Rank order,4,The Individualist,5,"Rank from most to least true (stem: ""I value..."")","I value intensity, depth, and a sense of personal significance.",I value intensity and depth in my experiences and relationships.
+R2 — Rank order,5,The Investigator,1,"Rank from most to least true (stem: ""I value..."")","I value knowledge, independence, and protecting my inner space.",
+R2 — Rank order,5,The Investigator,2,"Rank from most to least true (stem: ""I value..."")",I value understanding how things work and thinking for myself.,I value building my own thorough understanding rather than relying on others' conclusions.
+R2 — Rank order,5,The Investigator,3,"Rank from most to least true (stem: ""I value..."")","I value privacy, clear boundaries, and the freedom to observe before engaging.",
+R2 — Rank order,5,The Investigator,4,"Rank from most to least true (stem: ""I value..."")","I value competence, self-sufficiency, and not needing others to function.",I value self-sufficiency and being capable enough not to depend on others.
+R2 — Rank order,5,The Investigator,5,"Rank from most to least true (stem: ""I value..."")",I value having enough time and space to think things through fully.,I value having enough time and mental space to feel genuinely prepared before I act.
+R2 — Rank order,6,The Loyalist,1,"Rank from most to least true (stem: ""I value..."")","I value loyalty, reliability, and being prepared for what's ahead.",
+R2 — Rank order,6,The Loyalist,2,"Rank from most to least true (stem: ""I value..."")","I value trust, security, and having people I can count on.",
+R2 — Rank order,6,The Loyalist,3,"Rank from most to least true (stem: ""I value..."")",I value commitment and knowing where I stand with others.,
+R2 — Rank order,6,The Loyalist,4,"Rank from most to least true (stem: ""I value..."")",I value anticipating risks and being ready for challenges before they arise.,I value anticipating what might go wrong and having a plan ready before problems arise.
+R2 — Rank order,6,The Loyalist,5,"Rank from most to least true (stem: ""I value..."")",I value dependable relationships and clear expectations.,I value clear commitments and stable expectations in my relationships and environments.
+R2 — Rank order,7,The Enthusiast,1,"Rank from most to least true (stem: ""I value..."")","I value freedom, variety, and staying open to new experiences.",
+R2 — Rank order,7,The Enthusiast,2,"Rank from most to least true (stem: ""I value..."")","I value excitement, creativity, and keeping life spontaneous.",
+R2 — Rank order,7,The Enthusiast,3,"Rank from most to least true (stem: ""I value..."")","I value joy, possibility, and the freedom to explore.",
+R2 — Rank order,7,The Enthusiast,4,"Rank from most to least true (stem: ""I value..."")",I value keeping my options open and not being tied down.,
+R2 — Rank order,7,The Enthusiast,5,"Rank from most to least true (stem: ""I value..."")",I value stimulating ideas and the thrill of what's coming next.,
+R2 — Rank order,8,The Challenger,1,"Rank from most to least true (stem: ""I value..."")","I value strength, directness, and the ability to act decisively.",
+R2 — Rank order,8,The Challenger,2,"Rank from most to least true (stem: ""I value..."")","I value honesty, courage, and protecting what matters to me.",
+R2 — Rank order,8,The Challenger,3,"Rank from most to least true (stem: ""I value..."")","I value self-reliance, resilience, and not being controlled by others.",
+R2 — Rank order,8,The Challenger,4,"Rank from most to least true (stem: ""I value..."")",I value being in control of my own decisions and resources.,
+R2 — Rank order,8,The Challenger,5,"Rank from most to least true (stem: ""I value..."")",I value taking charge and standing up for what I believe in.,I value taking charge when something needs to happen and no one else is stepping up.
+R2 — Rank order,9,The Peacemaker,1,"Rank from most to least true (stem: ""I value..."")","I value peace, harmony, and a sense of inner calm.",
+R2 — Rank order,9,The Peacemaker,2,"Rank from most to least true (stem: ""I value..."")","I value acceptance, stability, and keeping relationships smooth.",
+R2 — Rank order,9,The Peacemaker,3,"Rank from most to least true (stem: ""I value..."")",I value going with the flow and finding common ground.,
+R2 — Rank order,9,The Peacemaker,4,"Rank from most to least true (stem: ""I value..."")",I value being easy to be around and not creating unnecessary conflict.,
+R2 — Rank order,9,The Peacemaker,5,"Rank from most to least true (stem: ""I value..."")","I value comfort, consistency, and a life free from tension.","I value feeling settled and undisturbed, with as little friction or tension as possible."
+R3 — Forced choice,1,The Reformer,1,What's more important to me is... [completion],"to be good, ethical, and beyond reproach",
+R3 — Forced choice,1,The Reformer,2,What's more important to me is... [completion],to do things the right way and correct what's wrong,to constantly work toward being better and correcting what falls short
+R3 — Forced choice,1,The Reformer,3,What's more important to me is... [completion],to live with integrity and maintain my principles,
+R3 — Forced choice,1,The Reformer,4,What's more important to me is... [completion],to improve myself and the world around me,
+R3 — Forced choice,1,The Reformer,5,What's more important to me is... [completion],to be responsible and never compromise my values,
+R3 — Forced choice,2,The Helper,1,What's more important to me is... [completion],to be loved and feel indispensable to others,
+R3 — Forced choice,2,The Helper,2,What's more important to me is... [completion],to be needed and to express love through giving,
+R3 — Forced choice,2,The Helper,3,What's more important to me is... [completion],to feel appreciated for how much I care,
+R3 — Forced choice,2,The Helper,4,What's more important to me is... [completion],to be close to the people I love and feel their affection,
+R3 — Forced choice,2,The Helper,5,What's more important to me is... [completion],to make others feel good and know I matter to them,
+R3 — Forced choice,3,The Achiever,1,What's more important to me is... [completion],to be admired and seen as successful,
+R3 — Forced choice,3,The Achiever,2,What's more important to me is... [completion],to accomplish meaningful things and be recognized for them,to accomplish impressive things and be recognized for them
+R3 — Forced choice,3,The Achiever,3,What's more important to me is... [completion],"to win, excel, and prove my worth through results",
+R3 — Forced choice,3,The Achiever,4,What's more important to me is... [completion],to be valued for what I achieve and how I perform,to be seen as someone who achieves and performs at a high level
+R3 — Forced choice,3,The Achiever,5,What's more important to me is... [completion],to feel effective and be respected by others,
+R3 — Forced choice,4,The Individualist,1,What's more important to me is... [completion],to be truly known and understood as I am,
+R3 — Forced choice,4,The Individualist,2,What's more important to me is... [completion],to express my unique identity and be seen in my depth,
+R3 — Forced choice,4,The Individualist,3,What's more important to me is... [completion],"to feel that my life has beauty, meaning, and significance",to feel that my life has meaning and hasn't dissolved into the ordinary
+R3 — Forced choice,4,The Individualist,4,What's more important to me is... [completion],to connect with something rare and emotionally profound,to find people and experiences that meet me in depth and feel profound
+R3 — Forced choice,4,The Individualist,5,What's more important to me is... [completion],to be authentic and belong without losing myself,
+R3 — Forced choice,5,The Investigator,1,What's more important to me is... [completion],to feel capable and self-sufficient,"to feel capable and self-contained, without needing to depend on others"
+R3 — Forced choice,5,The Investigator,2,What's more important to me is... [completion],to understand the world and protect my inner resources,
+R3 — Forced choice,5,The Investigator,3,What's more important to me is... [completion],to have enough knowledge and space to feel secure,
+R3 — Forced choice,5,The Investigator,4,What's more important to me is... [completion],to think clearly without being pulled into others' emotions,
+R3 — Forced choice,5,The Investigator,5,What's more important to me is... [completion],to be competent and maintain my independence,
+R3 — Forced choice,6,The Loyalist,1,What's more important to me is... [completion],"to feel safe, supported, and certain about what to expect",
+R3 — Forced choice,6,The Loyalist,2,What's more important to me is... [completion],to find people and systems I can truly trust,
+R3 — Forced choice,6,The Loyalist,3,What's more important to me is... [completion],to be prepared for whatever might go wrong,
+R3 — Forced choice,6,The Loyalist,4,What's more important to me is... [completion],to feel a sense of belonging in a reliable community,
+R3 — Forced choice,6,The Loyalist,5,What's more important to me is... [completion],to have guidance and know I won't be abandoned,
+R3 — Forced choice,7,The Enthusiast,1,What's more important to me is... [completion],"to stay free, stimulated, and open to what's next",
+R3 — Forced choice,7,The Enthusiast,2,What's more important to me is... [completion],to avoid pain and keep experiencing joy and possibility,
+R3 — Forced choice,7,The Enthusiast,3,What's more important to me is... [completion],"to never feel trapped, limited, or cut off from options",to keep my options open and avoid feeling boxed in or constrained
+R3 — Forced choice,7,The Enthusiast,4,What's more important to me is... [completion],"to be fully alive — curious, playful, and expansive","to stay curious, stimulated, and moving toward what's alive"
+R3 — Forced choice,7,The Enthusiast,5,What's more important to me is... [completion],to pursue happiness and resist anything that constrains me,to keep moving toward what's enjoyable and interesting and not constrained
+R3 — Forced choice,8,The Challenger,1,What's more important to me is... [completion],to be strong and never be controlled by others,
+R3 — Forced choice,8,The Challenger,2,What's more important to me is... [completion],to protect myself and those I care about from harm,
+R3 — Forced choice,8,The Challenger,3,What's more important to me is... [completion],to have power over my own life and decisions,
+R3 — Forced choice,8,The Challenger,4,What's more important to me is... [completion],to be respected for my strength and directness,
+R3 — Forced choice,8,The Challenger,5,What's more important to me is... [completion],to face challenges head-on and never back down,to meet difficulty directly without flinching or backing down
+R3 — Forced choice,9,The Peacemaker,1,What's more important to me is... [completion],to have inner peace and avoid conflict at all costs,to have inner peace and preserve harmony wherever I can
+R3 — Forced choice,9,The Peacemaker,2,What's more important to me is... [completion],to feel connected and accepted without having to fight for it,
+R3 — Forced choice,9,The Peacemaker,3,What's more important to me is... [completion],to maintain harmony and keep things calm around me,
+R3 — Forced choice,9,The Peacemaker,4,What's more important to me is... [completion],"to feel settled, comfortable, and free from tension","to feel undisturbed and at ease, with no friction or urgency pulling at me"
+R3 — Forced choice,9,The Peacemaker,5,What's more important to me is... [completion],to be at ease with myself and with those around me,
